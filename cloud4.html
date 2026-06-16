@@ -1,0 +1,319 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 4: Cloud Types & Deployment Models — NPTEL Study Guide</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>.mnemonic{background:linear-gradient(135deg,#fef3c7,#fffbeb);border:1px solid #fcd34d;border-radius:var(--radius-sm);padding:1rem;margin:.75rem 0}.def-item{border-left:3px solid var(--primary);padding:.5rem 1rem;margin:.75rem 0;background:var(--surface2);border-radius:0 var(--radius-sm) var(--radius-sm) 0}.def-term{font-weight:700;color:var(--primary)}</style>
+</head>
+<body>
+<nav class="navbar">
+  <a class="nav-brand" href="../index.html"><span class="icon">☁️</span> CloudStudy NPTEL</a>
+  <div class="nav-links" id="navLinks">
+    <a href="../index.html">Home</a><a href="chapter-4.html" class="active">Ch 4</a>
+    <a href="../mcq.html">MCQ</a><a href="../flashcards.html">Flashcards</a>
+    <a href="../glossary.html">Glossary</a><a href="../revision.html">Revision</a>
+  </div>
+  <button class="btn-theme" id="themeToggle">🌙</button>
+  <button class="hamburger" id="hamburger">☰</button>
+</nav>
+<div class="container page">
+  <div style="font-size:.8rem;color:var(--text-muted);margin-bottom:1rem"><a href="../index.html" style="color:var(--primary)">Home</a> › Module 1 › Chapter 4</div>
+  <div class="card" style="margin-bottom:1.5rem;background:linear-gradient(135deg,#d97706,#dc2626);color:white;border:none">
+    <div style="font-size:.8rem;opacity:.8;margin-bottom:.5rem">MODULE 1 — CHAPTER 4</div>
+    <h1 style="font-size:1.75rem;margin-bottom:.75rem">🏢 Cloud Types & Deployment Models</h1>
+    <p style="opacity:.9;font-size:.95rem">Public, Private, Hybrid, Community Cloud — Components, Implementation, Pros & Cons</p>
+    <div style="display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap">
+      <span style="background:rgba(255,255,255,.2);padding:.25rem .75rem;border-radius:20px;font-size:.8rem">⏱ ~45 min</span>
+      <span style="background:rgba(255,255,255,.2);padding:.25rem .75rem;border-radius:20px;font-size:.8rem">📊 20% weightage</span>
+      <span style="background:rgba(255,255,255,.2);padding:.25rem .75rem;border-radius:20px;font-size:.8rem">⭐⭐⭐ Very High Priority</span>
+    </div>
+  </div>
+  <div class="tab-group">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="n4">📖 Notes</button>
+      <button class="tab-btn" data-tab="d4">📋 Definitions</button>
+      <button class="tab-btn" data-tab="t4">📊 Tables</button>
+      <button class="tab-btn" data-tab="diag4">🗺 Diagrams</button>
+      <button class="tab-btn" data-tab="m4">🧠 Memory</button>
+      <button class="tab-btn" data-tab="q4">❓ Quiz</button>
+      <button class="tab-btn" data-tab="f4">🃏 Flashcards</button>
+      <button class="tab-btn" data-tab="r4">⚡ Revision</button>
+    </div>
+
+    <div class="tab-content active" id="n4">
+      <div class="note-box note-info"><strong>🎯 Learning Objectives:</strong> Know the 4 cloud deployment types (Public/Private/Hybrid/Community), their advantages/disadvantages, private cloud components, and implementation steps.</div>
+
+      <div class="section-title">4.2 The 4 Cloud Deployment Types</div>
+
+      <div class="card" style="border-left:4px solid #2563eb;margin-bottom:1rem">
+        <h3 style="color:#2563eb">🌐 Public Cloud</h3>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>What:</strong> Infrastructure available to the general public over the internet. Managed by CSP.</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Key feature:</strong> Multi-tenancy (multiple users share resources)</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Examples:</strong> Amazon EC2, Microsoft Azure, Google Cloud Platform, IBM SmartCloud, Windows Azure, Gmail</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Use cases:</strong> Storage, testing, application hosting, development environments</p>
+        <h4 style="margin:.75rem 0 .4rem">✅ Advantages:</h4>
+        <ul style="padding-left:1.5rem;font-size:.875rem">
+          <li>No responsibility for buying/maintaining hardware</li>
+          <li>Easy to integrate — highly flexible</li>
+          <li>Maintained by CSP</li>
+          <li>Lower cost than private/hybrid</li>
+          <li>Location independent</li>
+          <li>Nearly unlimited scalability</li>
+          <li>Highly reliable (vast network of servers)</li>
+        </ul>
+        <h4 style="margin:.75rem 0 .4rem">❌ Disadvantages:</h4>
+        <ul style="padding-left:1.5rem;font-size:.875rem">
+          <li>Less security (resources shared publicly)</li>
+          <li>Internet bandwidth is a bottleneck</li>
+          <li>Client has no control of data (lesser autonomy)</li>
+          <li>Less customization</li>
+          <li>May not meet industry standards/government policies</li>
+          <li>Sudden changes by CSP can have dire impacts</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border-left:4px solid #059669;margin-bottom:1rem">
+        <h3 style="color:#059669">🔒 Private Cloud</h3>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>What:</strong> Cloud infrastructure dedicated exclusively to ONE organization. Also called "corporate" or "internal" cloud.</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Key feature:</strong> Highest security and control</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Open-source tools:</strong> OpenStack, Open Nebula, Eucalyptus</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Providers:</strong> IBM, VMware, HPE, Oracle, Dell EMC</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Users:</strong> Government bodies, financial organizations, large corporates with business-critical data</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Note:</strong> Private cloud does NOT require being online always</p>
+        <h4 style="margin:.75rem 0 .4rem">✅ Advantages:</h4>
+        <ul style="padding-left:1.5rem;font-size:.875rem">
+          <li>High level of security and privacy</li>
+          <li>Better autonomy — complete control over infrastructure</li>
+          <li>Can meet strict security, compliance, or legal requirements</li>
+          <li>Quick on-demand IT resource allocation</li>
+          <li>No risk of sudden CSP changes</li>
+        </ul>
+        <h4 style="margin:.75rem 0 .4rem">❌ Disadvantages:</h4>
+        <ul style="padding-left:1.5rem;font-size:.875rem">
+          <li>Requires expert IT personnel to manage</li>
+          <li>Limited to within the organization</li>
+          <li>High investment for deployment and maintenance</li>
+          <li>New operational processes required</li>
+          <li>Less scalable than public cloud</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border-left:4px solid #d97706;margin-bottom:1rem">
+        <h3 style="color:#d97706">🔀 Hybrid Cloud</h3>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>What:</strong> Combination of public + private cloud connected via LAN/WAN/VPN</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Best when:</strong> (1) Data can't go to cloud due to legal reasons, (2) Want to keep old hardware running for legacy apps</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Example scenario:</strong> App deployed on public cloud (scalability) + Database on private cloud (security)</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Examples:</strong> Google Suite (Gmail, Google Apps, Drive), Office 365</p>
+        <h4 style="margin:.75rem 0 .4rem">✅ Advantages:</h4>
+        <ul style="padding-left:1.5rem;font-size:.875rem">
+          <li>Flexibility + scalability vs on-premises</li>
+          <li>Reduced time to market</li>
+          <li>Operational flexibility (critical workloads on private, testing on public)</li>
+          <li>Flexible public resources + secure private resources</li>
+        </ul>
+        <h4 style="margin:.75rem 0 .4rem">❌ Disadvantages:</h4>
+        <ul style="padding-left:1.5rem;font-size:.875rem">
+          <li>Security compromised compared to pure private</li>
+          <li>Reliability depends on CSP</li>
+          <li>Complex to manage (heterogeneous models)</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border-left:4px solid #7c3aed;margin-bottom:1rem">
+        <h3 style="color:#7c3aed">👥 Community Cloud</h3>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>What:</strong> Shared infrastructure among organizations with shared concerns/tasks</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Managed by:</strong> One/more organizations in community, third party, or combination</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Sectors:</strong> Media, Healthcare, Energy, Scientific Research</p>
+        <p style="font-size:.9rem;margin:.5rem 0"><strong>Security:</strong> More than public, less than private. Shared compliance requirements.</p>
+      </div>
+
+      <div class="section-title">4.3 Private Cloud Components</div>
+      <p style="margin-bottom:.75rem">Generic term for components: <strong>"Cloud Infrastructure"</strong></p>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Hardware:</strong> Routers, switches, load balancers, firewall, storage arrays, servers, backup devices</li>
+        <li><strong>Virtualization:</strong> Hypervisor sits on hardware, abstracts resources (compute, storage, memory)</li>
+        <li><strong>Storage:</strong> Storage management for backup, data removal, reliability. Storage virtualization abstracts physical storage.</li>
+        <li><strong>Network:</strong> Physical switches, routers, cables + virtual networks (VLANs). Static/dynamic IP assignment.</li>
+      </ul>
+
+      <div class="section-title">4.4 Private Cloud Implementation — Key Building Blocks</div>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Virtualization</strong> (combines physical resources into shared pools)</li>
+        <li><strong>Service catalog</strong></li>
+        <li><strong>Self-service portal</strong></li>
+        <li><strong>Support for heterogeneous systems</strong></li>
+        <li><strong>Resource and workload manager</strong></li>
+        <li><strong>Metering software and pay-per-use billing</strong></li>
+      </ul>
+      <h4 style="margin-bottom:.5rem">Implementation Steps:</h4>
+      <ol style="padding-left:1.5rem;margin-bottom:1rem;font-size:.9rem">
+        <li><strong>Hardware Setup:</strong> Select optimal hardware for application demands</li>
+        <li><strong>Install management software (the "stack"):</strong> OpenStack, VMware vSphere, or CloudStack</li>
+        <li><strong>Configure management software controller:</strong> Interface for creating and managing VMs. Can be on separate server for redundancy.</li>
+        <li><strong>Create VM templates and deploy server images</strong></li>
+        <li><strong>Create, License and Test VMs:</strong> Final troubleshooting and testing</li>
+      </ol>
+      <div class="note-box note-success"><strong>⭐ Key management software:</strong> OpenStack, VMware vSphere, CloudStack. Hypervisors: ESXi, Xen, KVM.</div>
+      <button class="btn btn-success" onclick="markChapterComplete(4)" style="margin-top:1rem">✅ Mark Chapter 4 Complete</button>
+    </div>
+
+    <div class="tab-content" id="d4">
+      <div class="section-title">📋 Key Definitions</div>
+      <div class="def-item"><div class="def-term">Public Cloud</div><p style="font-size:.9rem;margin-top:.25rem">Cloud infrastructure open to the general public. Multi-tenant. Managed and operated by CSP. Pay-per-use. Examples: AWS, Azure, GCP.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">Private Cloud</div><p style="font-size:.9rem;margin-top:.25rem">Cloud infrastructure dedicated exclusively to one organization. Also called corporate or internal cloud. Highest security and control. Tools: OpenStack, Eucalyptus.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">Hybrid Cloud</div><p style="font-size:.9rem;margin-top:.25rem">Combination of public and private cloud environments connected via LAN/WAN/VPN. Best of both worlds.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">Community Cloud</div><p style="font-size:.9rem;margin-top:.25rem">Shared infrastructure for organizations with shared concerns or tasks. More security than public, less than private. Used in healthcare, research, media.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">Hypervisor</div><p style="font-size:.9rem;margin-top:.25rem">Software that sits on top of physical hardware and abstracts machine resources to create virtual machines. Also called VMM (Virtual Machine Monitor). Examples: ESXi, Xen, KVM.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">OpenStack</div><p style="font-size:.9rem;margin-top:.25rem">Open-source cloud platform used to implement private clouds using dedicated resources. One of the most common private cloud management tools.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">VLAN (Virtual Local Area Network)</div><p style="font-size:.9rem;margin-top:.25rem">Virtual network created on top of physical network resources in cloud infrastructure. Used to logically segment network traffic.</p><p style="font-size:.8rem;color:var(--primary)">⭐</p></div>
+    </div>
+
+    <div class="tab-content" id="t4">
+      <div class="section-title">📊 Cloud Types Mega Comparison Table</div>
+      <div class="table-wrap" style="margin-bottom:2rem">
+        <table>
+          <thead><tr><th>Feature</th><th>Public</th><th>Private</th><th>Hybrid</th><th>Community</th></tr></thead>
+          <tbody>
+            <tr><td>Access</td><td>General public</td><td>Single org only</td><td>Mix</td><td>Group of orgs</td></tr>
+            <tr><td>Security</td><td>Lowest</td><td>Highest</td><td>Medium</td><td>Medium-High</td></tr>
+            <tr><td>Cost</td><td>Lowest (pay-per-use)</td><td>Highest (own infra)</td><td>Medium</td><td>Shared cost</td></tr>
+            <tr><td>Scalability</td><td>Unlimited</td><td>Limited</td><td>High</td><td>Medium</td></tr>
+            <tr><td>Control</td><td>Low</td><td>Full</td><td>Partial</td><td>Shared</td></tr>
+            <tr><td>Customization</td><td>Low</td><td>High</td><td>Medium</td><td>Medium</td></tr>
+            <tr><td>Examples</td><td>AWS, Azure, GCP</td><td>OpenStack, VMware</td><td>O365, G Suite</td><td>Healthcare clouds</td></tr>
+            <tr><td>Who uses</td><td>Everyone</td><td>Govt, banks, large corps</td><td>Enterprises</td><td>Research, media</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 style="margin-bottom:.75rem">Private Cloud: Open-source Tools</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Tool</th><th>Type</th><th>Usage</th></tr></thead>
+          <tbody>
+            <tr><td>OpenStack</td><td>Open-source</td><td>Most popular private cloud platform</td></tr>
+            <tr><td>Eucalyptus</td><td>Open-source</td><td>AWS-compatible private cloud</td></tr>
+            <tr><td>Open Nebula</td><td>Open-source</td><td>Flexible private/hybrid cloud</td></tr>
+            <tr><td>VMware vSphere</td><td>Commercial</td><td>Enterprise virtualization</td></tr>
+            <tr><td>CloudStack</td><td>Open-source</td><td>IaaS cloud platform</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-content" id="diag4">
+      <div class="section-title">🗺 Cloud Types Visual</div>
+      <div class="mermaid-wrap">
+        <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px">
+          <!-- Public -->
+          <rect x="20" y="20" width="130" height="130" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+          <text x="85" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">🌐 PUBLIC</text>
+          <text x="85" y="70" text-anchor="middle" font-size="10" fill="#3b82f6">General Public</text>
+          <text x="85" y="88" text-anchor="middle" font-size="10" fill="#3b82f6">Multi-tenant</text>
+          <text x="85" y="106" text-anchor="middle" font-size="10" fill="#3b82f6">AWS, Azure, GCP</text>
+          <text x="85" y="130" text-anchor="middle" font-size="11" fill="#2563eb">💰 Cheapest</text>
+          <!-- Private -->
+          <rect x="170" y="20" width="130" height="130" rx="10" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+          <text x="235" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#065f46">🔒 PRIVATE</text>
+          <text x="235" y="70" text-anchor="middle" font-size="10" fill="#059669">Single Org Only</text>
+          <text x="235" y="88" text-anchor="middle" font-size="10" fill="#059669">Full Control</text>
+          <text x="235" y="106" text-anchor="middle" font-size="10" fill="#059669">OpenStack, VMware</text>
+          <text x="235" y="130" text-anchor="middle" font-size="11" fill="#059669">🔐 Most Secure</text>
+          <!-- Hybrid -->
+          <rect x="320" y="20" width="130" height="130" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+          <text x="385" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">🔀 HYBRID</text>
+          <text x="385" y="70" text-anchor="middle" font-size="10" fill="#d97706">Public + Private</text>
+          <text x="385" y="88" text-anchor="middle" font-size="10" fill="#d97706">LAN/WAN/VPN</text>
+          <text x="385" y="106" text-anchor="middle" font-size="10" fill="#d97706">O365, G Suite</text>
+          <text x="385" y="130" text-anchor="middle" font-size="11" fill="#d97706">⚖️ Balanced</text>
+          <!-- Community -->
+          <rect x="470" y="20" width="110" height="130" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+          <text x="525" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#5b21b6">👥 COMMUNITY</text>
+          <text x="525" y="70" text-anchor="middle" font-size="10" fill="#7c3aed">Shared Orgs</text>
+          <text x="525" y="88" text-anchor="middle" font-size="10" fill="#7c3aed">Common goals</text>
+          <text x="525" y="106" text-anchor="middle" font-size="10" fill="#7c3aed">Healthcare</text>
+          <text x="525" y="130" text-anchor="middle" font-size="11" fill="#7c3aed">🏥 Research</text>
+          <!-- Private Cloud Steps -->
+          <text x="300" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="var(--primary,#2563eb)">Private Cloud Implementation Steps</text>
+          <rect x="20" y="200" width="100" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+          <text x="70" y="225" text-anchor="middle" font-size="10" fill="#1d4ed8">1. Hardware Setup</text>
+          <rect x="135" y="200" width="100" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+          <text x="185" y="222" text-anchor="middle" font-size="9.5" fill="#1d4ed8">2. Install Mgmt</text>
+          <text x="185" y="234" text-anchor="middle" font-size="9.5" fill="#1d4ed8">Software</text>
+          <rect x="250" y="200" width="100" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+          <text x="300" y="222" text-anchor="middle" font-size="9.5" fill="#1d4ed8">3. Configure</text>
+          <text x="300" y="234" text-anchor="middle" font-size="9.5" fill="#1d4ed8">Controller</text>
+          <rect x="365" y="200" width="100" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+          <text x="415" y="222" text-anchor="middle" font-size="9.5" fill="#1d4ed8">4. VM Templates</text>
+          <text x="415" y="234" text-anchor="middle" font-size="9.5" fill="#1d4ed8">+ Images</text>
+          <rect x="480" y="200" width="100" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+          <text x="530" y="222" text-anchor="middle" font-size="9.5" fill="#1d4ed8">5. Create &amp;</text>
+          <text x="530" y="234" text-anchor="middle" font-size="9.5" fill="#1d4ed8">Test VMs</text>
+          <!-- Arrows between steps -->
+          <line x1="120" y1="220" x2="135" y2="220" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a4)"/>
+          <line x1="235" y1="220" x2="250" y2="220" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a4)"/>
+          <line x1="350" y1="220" x2="365" y2="220" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a4)"/>
+          <line x1="465" y1="220" x2="480" y2="220" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a4)"/>
+          <defs><marker id="a4" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#6b7280"/></marker></defs>
+        </svg>
+      </div>
+    </div>
+
+    <div class="tab-content" id="m4">
+      <div class="section-title">🧠 Memory Tricks</div>
+      <div class="mnemonic"><strong>☁️ 4 Cloud Types — "PPHC"</strong><p style="margin-top:.4rem"><strong>P</strong>ublic | <strong>P</strong>rivate | <strong>H</strong>ybrid | <strong>C</strong>ommunity</p><p style="font-size:.85rem;margin-top:.4rem">Remember as: <em>"People Prefer Hybrid Computing"</em> or <em>"Pub, Priv, Hybrid, Community"</em></p></div>
+      <div class="mnemonic"><strong>🔒 Security Order (Low→High)</strong><p style="margin-top:.4rem">Public (least) → Community → Hybrid → Private (most)</p><p style="font-size:.85rem;margin-top:.4rem">Think: The more public → less secure. The more private → more secure!</p></div>
+      <div class="mnemonic"><strong>💰 Cost Order (Low→High)</strong><p style="margin-top:.4rem">Public (cheapest) → Hybrid → Private (most expensive)</p></div>
+      <div class="mnemonic"><strong>🔧 Private Cloud Tools — "VOSS"</strong><p style="margin-top:.4rem"><strong>V</strong>Mware vSphere | <strong>O</strong>penStack | <strong>S</strong>CloudStack | (Eucalyptus)</p><p style="font-size:.85rem;margin-top:.4rem">Think: <em>"VOS — Very Open Software"</em></p></div>
+      <div class="mnemonic"><strong>🖥 Hypervisors — "EXK"</strong><p style="margin-top:.4rem"><strong>E</strong>SXi (VMware) | <strong>X</strong>en | <strong>K</strong>VM</p></div>
+      <div class="mnemonic"><strong>5 Private Cloud Steps — "HICVT"</strong><p style="margin-top:.4rem"><strong>H</strong>ardware → <strong>I</strong>nstall software → <strong>C</strong>onfigure controller → <strong>V</strong>M templates → <strong>T</strong>est VMs</p><p style="font-size:.85rem;margin-top:.4rem"><em>"Have I Created Virtual Things?"</em></p></div>
+    </div>
+
+    <div class="tab-content" id="q4">
+      <div class="section-title">❓ Chapter 4 Quiz</div>
+      <div id="ch4-mcqs"></div>
+    </div>
+
+    <div class="tab-content" id="f4">
+      <div class="section-title">🃏 Chapter 4 Flashcards</div>
+      <div id="ch4-cards"></div>
+    </div>
+
+    <div class="tab-content" id="r4">
+      <div class="section-title">⚡ 5-Minute Revision</div>
+      <div class="note-box note-success"><strong>1. 4 Cloud Types:</strong> Public (general, cheapest), Private (single org, most secure), Hybrid (mix), Community (shared orgs with common goals)</div>
+      <div class="note-box note-success"><strong>2. Public examples:</strong> Amazon EC2, Microsoft Azure, Google Cloud, Gmail</div>
+      <div class="note-box note-success"><strong>3. Private tools:</strong> OpenStack, Eucalyptus, Open Nebula. Providers: IBM, VMware, Dell EMC</div>
+      <div class="note-box note-success"><strong>4. Private Cloud Components:</strong> Hardware + Virtualization (Hypervisor) + Storage + Network (VLANs)</div>
+      <div class="note-box note-success"><strong>5. Implementation Steps:</strong> Hardware → Install mgmt software → Configure controller → VM templates → Test VMs</div>
+      <div class="note-box note-success"><strong>6. Hypervisors:</strong> ESXi, Xen, KVM. Management software: OpenStack, VMware vSphere, CloudStack</div>
+      <div class="note-box note-success"><strong>7. Hybrid use case:</strong> App on public (scalability) + DB on private (security)</div>
+      <div class="note-box note-warning"><strong>⚠️ Traps:</strong> Private cloud does NOT need to be online always. Public cloud offers GREATEST sharing efficiency. Community cloud = more secure than public but less than private.</div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:2rem;flex-wrap:wrap;gap:1rem">
+    <a href="cloud3.html" class="btn btn-secondary">← Chapter 3</a>
+    <a href="cloud5.html" class="btn btn-primary">Chapter 5: IaaS & PaaS →</a>
+  </div>
+</div>
+<button class="back-to-top" id="backToTop">↑</button>
+<script src="../js/main.js"></script>
+<script>
+fetch('../data/mcqs.json').then(r=>r.json()).then(mcqs=>{
+  initQuiz(mcqs.filter(q=>q.chapter===4),'ch4-mcqs');
+});
+const ch4Cards=[
+  {front:"Which cloud type offers highest security?",back:"Private Cloud — dedicated to a single organization, full control over infrastructure. Used by government, banks, large corporations."},
+  {front:"Which cloud type is cheapest?",back:"Public Cloud — resources shared among many users (multi-tenancy). Managed by CSP. Pay-per-use model."},
+  {front:"What is Community Cloud?",back:"Cloud infrastructure shared among organizations with shared concerns/tasks (e.g., healthcare, research, media). More secure than public, less than private."},
+  {front:"Name 3 open-source private cloud tools.",back:"1) OpenStack\n2) Eucalyptus\n3) Open Nebula\n\nManagement: CloudStack, VMware vSphere"},
+  {front:"What is a Hypervisor?",back:"Software (also called VMM) that sits on top of physical hardware, abstracts machine resources, and enables multiple VMs to run on one server. Examples: ESXi, Xen, KVM."},
+  {front:"5 steps to implement private cloud?",back:"1) Hardware Setup\n2) Install management software (OpenStack/vSphere)\n3) Configure controller\n4) Create VM templates\n5) Create, License & Test VMs"},
+  {front:"What are 4 Private Cloud components?",back:"1) Hardware (routers, servers, firewall)\n2) Virtualization (Hypervisor)\n3) Storage management\n4) Network (physical + VLANs)"},
+  {front:"When is Hybrid Cloud recommended?",back:"1) Data can't go to cloud due to legal reasons\n2) Want to keep old hardware for legacy apps\n3) Need scalability (public) + security (private) together"}
+];
+initFlashcards(ch4Cards,'ch4-cards');
+</script>
+</body>
+</html>

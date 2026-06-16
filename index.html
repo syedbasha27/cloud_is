@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 1: Introduction to Cloud Computing — NPTEL Study Guide</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.breadcrumb { font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem; }
+.breadcrumb a { color:var(--primary); }
+.mnemonic { background:linear-gradient(135deg,#fef3c7,#fffbeb); border:1px solid #fcd34d; border-radius:var(--radius-sm); padding:1rem; margin:0.75rem 0; }
+.def-item { border-left:3px solid var(--primary); padding:0.5rem 1rem; margin:0.75rem 0; background:var(--surface2); border-radius:0 var(--radius-sm) var(--radius-sm) 0; }
+.def-term { font-weight:700; color:var(--primary); }
+.star { color:var(--warning); }
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <a class="nav-brand" href="../index.html"><span class="icon">☁️</span> CloudStudy NPTEL</a>
+  <div class="nav-links" id="navLinks">
+    <a href="../index.html">Home</a>
+    <a href="chapter-1.html" class="active">Ch 1</a>
+    <a href="../mcq.html">MCQ</a>
+    <a href="../flashcards.html">Flashcards</a>
+    <a href="../glossary.html">Glossary</a>
+    <a href="../revision.html">Revision</a>
+  </div>
+  <button class="btn-theme" id="themeToggle">🌙</button>
+  <button class="hamburger" id="hamburger">☰</button>
+</nav>
+
+<div class="container page">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › Module 1 › Chapter 1</div>
+
+  <!-- CHAPTER HEADER -->
+  <div class="card" style="margin-bottom:1.5rem;background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;border:none">
+    <div style="font-size:0.8rem;opacity:0.8;margin-bottom:0.5rem">MODULE 1 — CHAPTER 1</div>
+    <h1 style="font-size:1.75rem;margin-bottom:0.75rem">☁️ Introduction to Cloud Computing</h1>
+    <p style="opacity:0.9;font-size:0.95rem">NIST definition, 5 essential characteristics, related technologies, SOA, distributed systems</p>
+    <div style="display:flex;gap:0.75rem;margin-top:1rem;flex-wrap:wrap">
+      <span style="background:rgba(255,255,255,0.2);padding:0.25rem 0.75rem;border-radius:20px;font-size:0.8rem">⏱ ~45 min read</span>
+      <span style="background:rgba(255,255,255,0.2);padding:0.25rem 0.75rem;border-radius:20px;font-size:0.8rem">📊 15-20% weightage</span>
+      <span style="background:rgba(255,255,255,0.2);padding:0.25rem 0.75rem;border-radius:20px;font-size:0.8rem">⭐ High priority</span>
+    </div>
+  </div>
+
+  <div class="tab-group">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="notes">📖 Notes</button>
+      <button class="tab-btn" data-tab="definitions">📋 Definitions</button>
+      <button class="tab-btn" data-tab="tables">📊 Tables</button>
+      <button class="tab-btn" data-tab="diagrams">🗺 Diagrams</button>
+      <button class="tab-btn" data-tab="memory">🧠 Memory Tricks</button>
+      <button class="tab-btn" data-tab="quiz">❓ Quiz</button>
+      <button class="tab-btn" data-tab="flashcards">🃏 Flashcards</button>
+      <button class="tab-btn" data-tab="revision">⚡ Revision</button>
+    </div>
+
+    <!-- ========== NOTES ========== -->
+    <div class="tab-content active" id="notes">
+
+      <div class="note-box note-info">
+        <strong>🎯 Learning Objectives:</strong> After this chapter, you'll know the NIST definition, 5 essential characteristics, cloud history, and how cloud relates to distributed systems, virtualization, grid computing, and SOA.
+      </div>
+
+      <!-- SECTION 1.2 -->
+      <div class="section-title">1.2 What is Cloud Computing?</div>
+
+      <p style="margin-bottom:1rem"><strong>Simple analogy:</strong> Think of cloud computing like electricity. You don't build your own power plant — you plug into the grid and pay for what you use. Cloud computing is the same idea but for IT resources (servers, storage, software).</p>
+
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>IBM</strong> formally introduced cloud computing in <strong>late 2007</strong></li>
+        <li>Cloud = delivering hosted services over the internet, <strong>on-demand</strong>, with <strong>pay-as-you-go</strong> pricing</li>
+        <li>Cloud is also defined as a <strong>large-scale distributed computing paradigm</strong> where services are provided via virtual machines</li>
+      </ul>
+
+      <div class="note-box note-success">
+        <strong><span class="star">⭐⭐⭐</span> The NIST Definition (Must Memorize):</strong><br>
+        "Cloud computing is a model for enabling <em>ubiquitous, convenient, on-demand network access</em> to a <em>shared pool of configurable computing resources</em> (networks, servers, storage, applications, and services) that can be <em>rapidly provisioned and released with minimal management effort</em> or service provider interaction."
+      </div>
+
+      <!-- SECTION 1.3 CHARACTERISTICS -->
+      <div class="section-title">1.3 The 5 Essential Characteristics (NIST)</div>
+      <p style="margin-bottom:1rem">These are the MOST important 5 points in this chapter. They appear in every NPTEL exam.</p>
+
+      <div class="card" style="margin-bottom:1rem">
+        <h4>1. 🖱 On-Demand Self-Service</h4>
+        <p style="font-size:0.9rem;margin-top:0.4rem">Users can get computing resources <strong>automatically without human interaction</strong> from the provider. Like an ATM — you get cash without talking to a bank teller.</p>
+      </div>
+      <div class="card" style="margin-bottom:1rem">
+        <h4>2. 🌐 Broad Network Access</h4>
+        <p style="font-size:0.9rem;margin-top:0.4rem">Cloud services are accessible over <strong>standard networks</strong> (internet) through <strong>heterogeneous devices</strong> — laptops, phones, tablets. Location independent!</p>
+      </div>
+      <div class="card" style="margin-bottom:1rem">
+        <h4>3. 🏊 Resource Pooling</h4>
+        <p style="font-size:0.9rem;margin-top:0.4rem">Provider's resources are <strong>pooled and shared</strong> among multiple users (multi-tenancy). Resources are dynamically assigned based on demand. Users typically don't control or know the exact location of resources.</p>
+      </div>
+      <div class="card" style="margin-bottom:1rem">
+        <h4>4. ↕️ Rapid Elasticity</h4>
+        <p style="font-size:0.9rem;margin-top:0.4rem">Resources can be <strong>scaled up or down quickly</strong>. To users, the cloud appears to have <strong>infinite capacity</strong>. Think of a rubber band — stretch it when needed, shrink it back when not.</p>
+      </div>
+      <div class="card" style="margin-bottom:1rem">
+        <h4>5. 📊 Measured Service</h4>
+        <p style="font-size:0.9rem;margin-top:0.4rem">Cloud systems <strong>automatically control and optimize</strong> resource use. Usage is monitored, measured, and <strong>billed transparently</strong> (pay-as-you-go). Like your electricity meter.</p>
+      </div>
+
+      <!-- ADDITIONAL CHARACTERISTICS -->
+      <div class="section-title">Additional Cloud Characteristics</div>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Multi-tenancy:</strong> Multiple users share the same physical resources (kept isolated and secure)</li>
+        <li><strong>Reliability:</strong> Commitment to zero downtime — SLA guarantees</li>
+        <li><strong>Scalability:</strong> Increase or decrease resources as needed</li>
+        <li><strong>Reduced time to market:</strong> Small orgs and startups can launch without large upfront investment</li>
+      </ul>
+
+      <!-- SECTION 1.4 RELATED TECHNOLOGIES -->
+      <div class="section-title">1.4 Related Technologies & Cloud Predecessors</div>
+
+      <div class="collapsible-header">🖥 Mainframe Computing <span class="arrow">▼</span></div>
+      <div class="collapsible-content">
+        <ul style="padding-left:1.5rem;font-size:0.9rem">
+          <li>Large computing facilities with multiple processing units</li>
+          <li>Presented as a single entity to users</li>
+          <li>Specialized for massive data processing (banking, ERP, online transactions)</li>
+          <li>Batch processing was the main application</li>
+          <li>Very reliable — could tolerate failure transparently</li>
+          <li>Popularity decreased but evolved versions still used today</li>
+        </ul>
+      </div>
+
+      <div class="collapsible-header">🔗 Cluster Computing <span class="arrow">▼</span></div>
+      <div class="collapsible-content">
+        <ul style="padding-left:1.5rem;font-size:0.9rem">
+          <li>Multiple computers combined forming one cluster</li>
+          <li>Low-cost alternative to mainframes and supercomputers</li>
+          <li>From end-user perspective, feels like a standalone system</li>
+          <li>LAN acts as the connection unit with high-bandwidth network</li>
+          <li>Used for: Petroleum Reservoir Simulation, Google Search Engine, Weather Forecasting</li>
+          <li>Easily extended if more computational power needed</li>
+        </ul>
+      </div>
+
+      <div class="collapsible-header">⚡ Grid Computing <span class="arrow">▼</span></div>
+      <div class="collapsible-content">
+        <ul style="padding-left:1.5rem;font-size:0.9rem">
+          <li>Appeared in early 90s as evolution of cluster computing</li>
+          <li>Cloud computing is considered the <strong>successor of grid computing</strong></li>
+          <li>Key difference: Grid is <strong>application-oriented</strong>, Cloud is <strong>service-oriented</strong></li>
+          <li>Resources are <strong>distributed</strong> in grid, <strong>centrally managed</strong> in cloud</li>
+          <li>Both use network technology and support multi-tasking</li>
+        </ul>
+      </div>
+
+      <div class="collapsible-header">🔲 Virtualization <span class="arrow">▼</span></div>
+      <div class="collapsible-content">
+        <ul style="padding-left:1.5rem;font-size:0.9rem">
+          <li>Separation of server software from hardware</li>
+          <li>Core technology enabling cloud computing</li>
+          <li>Virtual server = OS + applications + storage — all in software</li>
+          <li>Multiple OS stacks coexist on same hardware, isolated from each other</li>
+          <li>Examples: Amazon EC2, VMware vCloud, IBM Bloomix</li>
+        </ul>
+      </div>
+
+      <div class="collapsible-header">🔧 Service Oriented Computing (SOC) & SOA <span class="arrow">▼</span></div>
+      <div class="collapsible-content">
+        <ul style="padding-left:1.5rem;font-size:0.9rem">
+          <li>SOC = computing strategy using services as fundamental elements</li>
+          <li>SOA = Service Oriented Architecture — reorganizes software into interacting services</li>
+          <li>SOA is the <strong>core reference model</strong> for cloud computing</li>
+          <li>Services must be: technologically neutral, loosely coupled, support location transparency</li>
+          <li>SOC introduced two key concepts for cloud: <strong>Quality of Service (QoS)</strong> and <strong>SaaS</strong></li>
+          <li>Cloud vs SOA: In cloud you pay for infrastructure outcome; in SOA you pay for technology behind service</li>
+        </ul>
+      </div>
+
+      <!-- PRACTICAL USES -->
+      <div class="section-title">Real World Impact</div>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Large enterprises:</strong> Offload activities to cloud to reduce costs</li>
+        <li><strong>Startups:</strong> Launch business ideas quickly without upfront investment</li>
+        <li><strong>Developers:</strong> Don't worry about infrastructure complexity</li>
+        <li><strong>End users:</strong> Access services from anywhere on any device</li>
+      </ul>
+
+      <div class="note-box note-warning">
+        <strong>⚠️ Common Mistake:</strong> Students confuse grid computing and cloud computing. Remember: Grid = application-oriented, Cloud = service-oriented. Grid has distributed resource management, Cloud has centralized resource management.
+      </div>
+
+      <button class="btn btn-success" onclick="markChapterComplete(1)" style="margin-top:1rem">✅ Mark Chapter 1 Complete</button>
+    </div>
+
+    <!-- ========== DEFINITIONS ========== -->
+    <div class="tab-content" id="definitions">
+      <div class="section-title">📋 Key Definitions</div>
+
+      <div class="def-item">
+        <div class="def-term">Cloud Computing (NIST)</div>
+        <p style="font-size:0.9rem;margin-top:0.25rem">A model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources that can be rapidly provisioned and released with minimal management effort.</p>
+        <p style="font-size:0.8rem;color:var(--primary);margin-top:0.25rem">⭐⭐⭐ Must memorize — appears in exam definition questions</p>
+      </div>
+
+      <div class="def-item">
+        <div class="def-term">On-Demand Self-Service</div>
+        <p style="font-size:0.9rem;margin-top:0.25rem">The ability to provision computing capabilities automatically without requiring human interaction with the service provider.</p>
+        <p style="font-size:0.8rem;color:var(--primary);margin-top:0.25rem">⭐⭐⭐ NIST Characteristic 1</p>
+      </div>
+
+      <div class="def-item">
+        <div class="def-term">Broad Network Access</div>
+        <p style="font-size:0.9rem;margin-top:0.25rem">Capabilities are available over the network and accessed through standard mechanisms that promote use by heterogeneous thin or thick client platforms.</p>
+        <p style="font-size:0.8rem;color:var(--primary);margin-top:0.25rem">⭐⭐ NIST Characteristic 2</p>
+      </div>
+
+      <div class="def-item">
+        <div class="def-term">Resource Pooling</div>
+        <p style="font-size:0.9rem;margin-top:0.25rem">Provider's computing resources are pooled to serve multiple consumers using a multi-tenant model, with different physical and virtual resources dynamically assigned and reassigned according to consumer demand.</p>
+        <p style="font-size:0.8rem;color:var(--primary);margin-top:0.25rem">⭐⭐⭐ NIST Characteristic 3</p>
+      </div>
+
+      <div class="def-item">
+        <div class="def-term">Rapid Elasticity</div>
+        <p style="font-size:0.9rem;margin-top:0.25rem">Capabilities can be elastically provisioned and released to scale rapidly outward and inward commensurate with demand. To the consumer, available resources appear infinite.</p>
+        <p style="font-size:0.8rem;color:var(--primary);margin-top:0.25rem">⭐⭐⭐ NIST Characteristic 4</p>
+      </div>
+
+      <div class="def-item">
+        <div class="def-term">Measured Service</div>
+        <p style="font-size:0.9rem;margin-top:0.25rem">Cloud systems automatically control and optimize resource use by leveraging a metering capability. Resource usage can be monitored, controlled, and reported (pay-as-you-go).</p>
+        <p style="font-size:0.8rem;color:var(--primary);margin-top:0.25rem">⭐⭐⭐ NIST Characteristic 5</p>
+      </div>
+
+      <div class="def-item">
+        <div class="def-term">Virtualization</div>
+        <p style="font-size:0.9rem;margin-top:0.25rem">Separation of server software from hardware. Allows creation of virtual computing environments that simulate hardware interfaces. Core enabling technology for cloud computing.</p>
+        <p style="font-size:0.8rem;color:var(--primary);margin-top:0.25rem">⭐⭐⭐ Core cloud technology</p>
+      </div>
+
+      <div class="def-item">
+        <div class="def-term">SOA (Service Oriented Architecture)</div>
+        <p style="font-size:0.9rem;margin-top:0.25rem">Way of reorganizing software applications and infrastructure into a set of interacting services. Services are technologically neutral, loosely coupled, and support location transparency.</p>
+        <p style="font-size:0.8rem;color:var(--primary);margin-top:0.25rem">⭐⭐ Core reference model for cloud</p>
+      </div>
+
+      <div class="def-item">
+        <div class="def-term">Multi-Tenancy</div>
+        <p style="font-size:0.9rem;margin-top:0.25rem">Multiple users (tenants) sharing the same computing resources (memory, CPU, etc.) while being kept transparent and isolated from each other by the cloud provider.</p>
+        <p style="font-size:0.8rem;color:var(--primary);margin-top:0.25rem">⭐⭐ Fundamental cloud concept</p>
+      </div>
+    </div>
+
+    <!-- ========== TABLES ========== -->
+    <div class="tab-content" id="tables">
+      <div class="section-title">📊 Comparison Tables</div>
+
+      <h3 style="margin-bottom:0.75rem">Cloud vs Grid Computing</h3>
+      <div class="table-wrap" style="margin-bottom:2rem">
+        <table>
+          <thead><tr><th>Feature</th><th>Cloud Computing</th><th>Grid Computing</th></tr></thead>
+          <tbody>
+            <tr><td>Orientation</td><td>Service-oriented</td><td>Application-oriented</td></tr>
+            <tr><td>Resource Management</td><td>Centralized</td><td>Distributed</td></tr>
+            <tr><td>Scalability</td><td>On-demand, infinite to user</td><td>Limited to available nodes</td></tr>
+            <tr><td>Billing</td><td>Pay-as-you-go</td><td>Usually free/academic</td></tr>
+            <tr><td>Virtualization</td><td>Core component</td><td>Not necessarily</td></tr>
+            <tr><td>Users</td><td>Individual, enterprise, public</td><td>Scientific research, HPC</td></tr>
+            <tr><td>Relationship</td><td>Successor of grid</td><td>Predecessor of cloud</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-bottom:0.75rem">NIST 5 Essential Characteristics Summary</h3>
+      <div class="table-wrap" style="margin-bottom:2rem">
+        <table>
+          <thead><tr><th>#</th><th>Characteristic</th><th>Simple Meaning</th><th>Analogy</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>On-Demand Self-Service</td><td>Get resources without calling anyone</td><td>ATM machine</td></tr>
+            <tr><td>2</td><td>Broad Network Access</td><td>Access from any device, anywhere</td><td>TV channels via internet</td></tr>
+            <tr><td>3</td><td>Resource Pooling</td><td>Shared resources, multi-tenancy</td><td>Apartment building</td></tr>
+            <tr><td>4</td><td>Rapid Elasticity</td><td>Scale up/down instantly</td><td>Rubber band</td></tr>
+            <tr><td>5</td><td>Measured Service</td><td>Pay for what you use</td><td>Electricity meter</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-bottom:0.75rem">Cloud vs Traditional Computing</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Factor</th><th>Traditional</th><th>Cloud</th></tr></thead>
+          <tbody>
+            <tr><td>Infrastructure ownership</td><td>Own (CAPEX)</td><td>Rent (OPEX)</td></tr>
+            <tr><td>Scaling</td><td>Manual, slow</td><td>Automatic, instant</td></tr>
+            <tr><td>Upfront cost</td><td>High</td><td>Low/Zero</td></tr>
+            <tr><td>Maintenance</td><td>User's responsibility</td><td>Provider's responsibility</td></tr>
+            <tr><td>Flexibility</td><td>Limited</td><td>High</td></tr>
+            <tr><td>Location</td><td>On-premise</td><td>Anywhere</td></tr>
+            <tr><td>Resource usage model</td><td>Fixed allocation</td><td>Pay-as-you-go</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ========== DIAGRAMS ========== -->
+    <div class="tab-content" id="diagrams">
+      <div class="section-title">🗺 Diagrams & Concept Maps</div>
+
+      <h3 style="margin-bottom:0.75rem">Cloud Architecture Overview</h3>
+      <div class="mermaid-wrap">
+        <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px">
+          <!-- Cloud Shape -->
+          <ellipse cx="350" cy="80" rx="160" ry="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+          <text x="350" y="85" text-anchor="middle" font-size="16" font-weight="bold" fill="#1d4ed8">☁️ CLOUD</text>
+          <!-- SaaS Layer -->
+          <rect x="60" y="150" width="180" height="45" rx="8" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+          <text x="150" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#065f46">SaaS</text>
+          <!-- PaaS Layer -->
+          <rect x="260" y="150" width="180" height="45" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+          <text x="350" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">PaaS</text>
+          <!-- IaaS Layer -->
+          <rect x="460" y="150" width="180" height="45" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+          <text x="550" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">IaaS</text>
+          <!-- Arrows -->
+          <line x1="350" y1="130" x2="150" y2="150" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="350" y1="130" x2="350" y2="150" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="350" y1="130" x2="550" y2="150" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+          <!-- Users -->
+          <rect x="200" y="235" width="300" height="40" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+          <text x="350" y="260" text-anchor="middle" font-size="13" font-weight="bold" fill="#5b21b6">Users (Public / Private / Hybrid)</text>
+          <!-- Arrows to users -->
+          <line x1="150" y1="195" x2="300" y2="235" stroke="#6b7280" stroke-width="1.5"/>
+          <line x1="350" y1="195" x2="350" y2="235" stroke="#6b7280" stroke-width="1.5"/>
+          <line x1="550" y1="195" x2="400" y2="235" stroke="#6b7280" stroke-width="1.5"/>
+          <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#6b7280"/></marker></defs>
+        </svg>
+      </div>
+
+      <h3 style="margin-bottom:0.75rem;margin-top:1.5rem">Cloud Computing Evolution Timeline</h3>
+      <div class="mermaid-wrap">
+        <svg viewBox="0 0 700 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px">
+          <line x1="50" y1="65" x2="650" y2="65" stroke="#cbd5e1" stroke-width="3"/>
+          <!-- Points -->
+          <circle cx="100" cy="65" r="8" fill="#2563eb"/>
+          <circle cx="230" cy="65" r="8" fill="#7c3aed"/>
+          <circle cx="360" cy="65" r="8" fill="#059669"/>
+          <circle cx="490" cy="65" r="8" fill="#d97706"/>
+          <circle cx="620" cy="65" r="8" fill="#dc2626"/>
+          <!-- Labels top -->
+          <text x="100" y="40" text-anchor="middle" font-size="11" fill="#2563eb" font-weight="bold">Mainframes</text>
+          <text x="100" y="52" text-anchor="middle" font-size="10" fill="#64748b">1950s-60s</text>
+          <text x="360" y="40" text-anchor="middle" font-size="11" fill="#059669" font-weight="bold">Grid Computing</text>
+          <text x="360" y="52" text-anchor="middle" font-size="10" fill="#64748b">Early 1990s</text>
+          <text x="620" y="40" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="bold">Cloud 2.0</text>
+          <text x="620" y="52" text-anchor="middle" font-size="10" fill="#64748b">2010s+</text>
+          <!-- Labels bottom -->
+          <text x="230" y="90" text-anchor="middle" font-size="11" fill="#7c3aed" font-weight="bold">Cluster Computing</text>
+          <text x="230" y="102" text-anchor="middle" font-size="10" fill="#64748b">1980s-90s</text>
+          <text x="490" y="90" text-anchor="middle" font-size="11" fill="#d97706" font-weight="bold">Cloud (IBM/AWS)</text>
+          <text x="490" y="102" text-anchor="middle" font-size="10" fill="#64748b">2006-2007</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- ========== MEMORY TRICKS ========== -->
+    <div class="tab-content" id="memory">
+      <div class="section-title">🧠 Memory Tricks</div>
+
+      <div class="mnemonic">
+        <strong>🏆 NIST 5 Characteristics — Mnemonic: "On-Demand Burgers Rapidly Measured"</strong>
+        <ul style="margin-top:0.5rem;padding-left:1.5rem">
+          <li><strong>O</strong>n-Demand Self-Service</li>
+          <li><strong>B</strong>road Network Access</li>
+          <li><strong>R</strong>esource Pooling</li>
+          <li><strong>R</strong>apid Elasticity</li>
+          <li><strong>M</strong>easured Service</li>
+        </ul>
+        <p style="font-size:0.85rem;margin-top:0.5rem">Or try: <strong>"On-Demand, Broad, Resource, Rapid, Measured"</strong> — <em>think of ordering food online (on-demand), from anywhere (broad), shared kitchen (resource pooling), food delivered fast (rapid), and bill matches exactly what you ordered (measured)!</em></p>
+      </div>
+
+      <div class="mnemonic">
+        <strong>🌐 Grid vs Cloud — Quick Trick</strong>
+        <p style="margin-top:0.4rem"><strong>G</strong>rid = <strong>G</strong>oes Distributed, for big <strong>A</strong>pplications</p>
+        <p><strong>C</strong>loud = <strong>C</strong>entralised, for <strong>S</strong>ervices</p>
+        <p style="font-size:0.85rem;margin-top:0.4rem"><em>Grid → Distributed → Application-oriented | Cloud → Centralized → Service-oriented</em></p>
+      </div>
+
+      <div class="mnemonic">
+        <strong>📚 3 Predecessors of Cloud — "MCG"</strong>
+        <p style="margin-top:0.4rem"><strong>M</strong>ainframe → <strong>C</strong>luster → <strong>G</strong>rid → Cloud</p>
+        <p style="font-size:0.85rem;margin-top:0.4rem">Remember as "My Computer Got Cloud" — the evolution story!</p>
+      </div>
+
+      <div class="mnemonic">
+        <strong>💡 SOA vs Cloud — "Pay Different Things"</strong>
+        <p style="margin-top:0.4rem">In SOA you pay for <strong>technology behind the service</strong></p>
+        <p>In Cloud you pay for <strong>infrastructure/platform outcome</strong></p>
+        <p style="font-size:0.85rem;margin-top:0.4rem"><em>SOA services are software components; Cloud services can go up and down the stack!</em></p>
+      </div>
+
+      <div class="mnemonic">
+        <strong>🔑 Rapid Elasticity = "Rubber Band"</strong>
+        <p style="margin-top:0.4rem">Stretch when you need more resources, snap back when done. And to users — it looks like infinite resources!</p>
+      </div>
+    </div>
+
+    <!-- ========== QUIZ ========== -->
+    <div class="tab-content" id="quiz">
+      <div class="section-title">❓ Chapter 1 Quiz</div>
+      <p style="color:var(--text-muted);margin-bottom:1rem;font-size:0.875rem">Click an option to answer. Explanation appears after selection.</p>
+
+      <div id="chapter1-mcqs"></div>
+
+      <div class="note-box note-info" style="margin-top:1.5rem">
+        <strong>💡 Want more MCQs?</strong> Visit <a href="../mcq.html">the full MCQ Practice page</a> to filter by chapter, take timed quizzes, and track your score.
+      </div>
+    </div>
+
+    <!-- ========== FLASHCARDS ========== -->
+    <div class="tab-content" id="flashcards">
+      <div class="section-title">🃏 Chapter 1 Flashcards</div>
+      <div id="chapter1-cards"></div>
+    </div>
+
+    <!-- ========== REVISION ========== -->
+    <div class="tab-content" id="revision">
+      <div class="section-title">⚡ 5-Minute Revision</div>
+
+      <div class="note-box note-danger">
+        <strong>🎯 Must Remember — Chapter 1</strong>
+      </div>
+
+      <div class="note-box note-success">
+        <strong>1. NIST 5 Characteristics:</strong> On-Demand Self-Service | Broad Network Access | Resource Pooling | Rapid Elasticity | Measured Service
+      </div>
+      <div class="note-box note-success">
+        <strong>2. Cloud definition:</strong> IBM 2007 | NIST = ubiquitous, convenient, on-demand access to shared configurable resources
+      </div>
+      <div class="note-box note-success">
+        <strong>3. Cloud services:</strong> IaaS (bottom) → PaaS (middle) → SaaS (top)
+      </div>
+      <div class="note-box note-success">
+        <strong>4. Evolution:</strong> Mainframe → Cluster → Grid → Cloud
+      </div>
+      <div class="note-box note-success">
+        <strong>5. Grid vs Cloud:</strong> Grid = Application-oriented, Distributed management | Cloud = Service-oriented, Centralized management
+      </div>
+      <div class="note-box note-success">
+        <strong>6. Virtualization:</strong> Core cloud technology. Separates software from hardware. Hypervisor creates VMs.
+      </div>
+      <div class="note-box note-success">
+        <strong>7. SOA:</strong> Core reference model for cloud. Services = neutral, loosely coupled, location transparent.
+      </div>
+      <div class="note-box note-warning">
+        <strong>⚠️ Common Traps:</strong> Grid ≠ Cloud (different orientation) | SOA ≠ Cloud (different payment model) | Rapid Elasticity = scaling speed, NOT encryption
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPTER NAVIGATION -->
+  <div style="display:flex;justify-content:space-between;margin-top:2rem;flex-wrap:wrap;gap:1rem">
+    <a href="index.html" class="btn btn-secondary">← Home</a>
+    <a href="cloud2.html" class="btn btn-primary">Chapter 2: Cloud Architectures →</a>
+  </div>
+</div>
+
+<button class="back-to-top" id="backToTop">↑</button>
+<script src="../js/main.js"></script>
+<script>
+// Load MCQs for Chapter 1
+fetch('../data/mcqs.json')
+  .then(r => r.json())
+  .then(mcqs => {
+    const ch1 = mcqs.filter(q => q.chapter === 1);
+    initQuiz(ch1, 'chapter1-mcqs');
+  });
+
+// Chapter 1 Flashcards
+const ch1Cards = [
+  { front: "Who formally introduced Cloud Computing and when?", back: "IBM formally introduced cloud computing in late 2007." },
+  { front: "What are the 5 NIST essential characteristics of cloud?", back: "1) On-Demand Self-Service\n2) Broad Network Access\n3) Resource Pooling\n4) Rapid Elasticity\n5) Measured Service" },
+  { front: "What is Rapid Elasticity?", back: "Resources can be scaled up or down quickly. To users, cloud appears to have infinite capacity." },
+  { front: "What does Measured Service mean?", back: "Cloud resource usage is monitored, controlled, and billed transparently — pay-as-you-go model (like electricity meter)." },
+  { front: "Grid vs Cloud — key difference?", back: "Grid = Application-oriented, Distributed resource management. Cloud = Service-oriented, Centralized resource management." },
+  { front: "What is Multi-tenancy?", back: "Multiple users (tenants) share the same physical resources while being kept isolated and secure from each other." },
+  { front: "What is SOA and its role in cloud?", back: "SOA (Service Oriented Architecture) is the core reference model for cloud computing. It reorganizes software into loosely coupled, location-transparent services." },
+  { front: "What is Virtualization in cloud?", back: "Core cloud technology that separates software from hardware. Creates virtual machines (VMs) that share physical hardware resources." },
+  { front: "What are the 3 milestones leading to cloud?", back: "Mainframe Computing → Cluster Computing → Grid Computing → Cloud Computing" },
+  { front: "What does NIST stand for?", back: "National Institute of Standards and Technology — gave the most widely accepted definition of cloud computing." }
+];
+initFlashcards(ch1Cards, 'chapter1-cards');
+</script>
+</body>
+</html>

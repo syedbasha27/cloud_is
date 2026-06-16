@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 3: Cloud Layers, Principles & Risks — NPTEL Study Guide</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>.mnemonic{background:linear-gradient(135deg,#fef3c7,#fffbeb);border:1px solid #fcd34d;border-radius:var(--radius-sm);padding:1rem;margin:.75rem 0}.def-item{border-left:3px solid var(--primary);padding:.5rem 1rem;margin:.75rem 0;background:var(--surface2);border-radius:0 var(--radius-sm) var(--radius-sm) 0}.def-term{font-weight:700;color:var(--primary)}</style>
+</head>
+<body>
+<nav class="navbar">
+  <a class="nav-brand" href="../index.html"><span class="icon">☁️</span> CloudStudy NPTEL</a>
+  <div class="nav-links" id="navLinks">
+    <a href="../index.html">Home</a><a href="chapter-3.html" class="active">Ch 3</a>
+    <a href="../mcq.html">MCQ</a><a href="../flashcards.html">Flashcards</a>
+    <a href="../glossary.html">Glossary</a><a href="../revision.html">Revision</a>
+  </div>
+  <button class="btn-theme" id="themeToggle">🌙</button>
+  <button class="hamburger" id="hamburger">☰</button>
+</nav>
+<div class="container page">
+  <div style="font-size:.8rem;color:var(--text-muted);margin-bottom:1rem"><a href="../index.html" style="color:var(--primary)">Home</a> › Module 1 › Chapter 3</div>
+  <div class="card" style="margin-bottom:1.5rem;background:linear-gradient(135deg,#059669,#2563eb);color:white;border:none">
+    <div style="font-size:.8rem;opacity:.8;margin-bottom:.5rem">MODULE 1 — CHAPTER 3</div>
+    <h1 style="font-size:1.75rem;margin-bottom:.75rem">⚙️ Cloud Layers, Principles & Risks</h1>
+    <p style="opacity:.9;font-size:.95rem">System models, cloud computing layers, desired features, basic principles, risks and challenges</p>
+    <div style="display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap">
+      <span style="background:rgba(255,255,255,.2);padding:.25rem .75rem;border-radius:20px;font-size:.8rem">⏱ ~35 min</span>
+      <span style="background:rgba(255,255,255,.2);padding:.25rem .75rem;border-radius:20px;font-size:.8rem">📊 15% weightage</span>
+    </div>
+  </div>
+  <div class="tab-group">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="n3">📖 Notes</button>
+      <button class="tab-btn" data-tab="d3">📋 Definitions</button>
+      <button class="tab-btn" data-tab="t3">📊 Tables</button>
+      <button class="tab-btn" data-tab="m3">🧠 Memory</button>
+      <button class="tab-btn" data-tab="q3">❓ Quiz</button>
+      <button class="tab-btn" data-tab="f3">🃏 Flashcards</button>
+      <button class="tab-btn" data-tab="r3">⚡ Revision</button>
+    </div>
+
+    <div class="tab-content active" id="n3">
+      <div class="note-box note-info"><strong>🎯 Learning Objectives:</strong> Understand cloud system models, computing layers, desired features, basic principles, and identify cloud risks and challenges.</div>
+
+      <div class="section-title">3.2 Cloud System Models</div>
+      <p style="margin-bottom:1rem">Cloud system models describe how cloud infrastructure is organized and accessed. Three main delivery models:</p>
+      <div class="card" style="margin-bottom:.75rem"><h4>☁️ Public Cloud</h4><p style="font-size:.9rem;margin-top:.3rem">Services available to the general public over the internet. Managed by CSP. Multi-tenant. Pay-per-use. Examples: AWS, Azure, Google Cloud.</p></div>
+      <div class="card" style="margin-bottom:.75rem"><h4>🔒 Private Cloud</h4><p style="font-size:.9rem;margin-top:.3rem">Exclusively for one organization. Highest security and control. Can be on-premise or hosted by vendor. Examples: OpenStack, VMware vSphere.</p></div>
+      <div class="card" style="margin-bottom:.75rem"><h4>🔀 Hybrid Cloud</h4><p style="font-size:.9rem;margin-top:.3rem">Combination of public and private clouds connected via LAN/WAN/VPN. Best of both worlds — flexibility + security.</p></div>
+
+      <div class="section-title">3.3 Cloud Computing Layers</div>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Hardware Layer:</strong> Physical servers, networking equipment, storage devices, power supply, cooling systems in data centers</li>
+        <li><strong>Infrastructure Layer (IaaS):</strong> Virtualized resources — compute, storage, network. Hypervisors create VMs. Resource pooling.</li>
+        <li><strong>Platform Layer (PaaS):</strong> OS, runtime environments, middleware, development frameworks, databases</li>
+        <li><strong>Application Layer (SaaS):</strong> End-user applications delivered over the internet</li>
+      </ul>
+
+      <div class="section-title">3.4 Basic Principles of Cloud Computing</div>
+      <div class="note-box note-success"><strong>⭐⭐ These principles are exam favourites!</strong></div>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Scalability:</strong> Automatically add/remove resources based on demand</li>
+        <li><strong>Elasticity:</strong> Dynamic resource provisioning — scale up/down seamlessly</li>
+        <li><strong>Pay-per-use:</strong> Utility computing model — pay only for what is consumed</li>
+        <li><strong>Reliability:</strong> Cloud infrastructure is designed for high availability and fault tolerance</li>
+        <li><strong>Availability:</strong> Services accessible anytime, anywhere (broad network access)</li>
+        <li><strong>Security:</strong> Multi-layer security approach to protect data and services</li>
+        <li><strong>Virtualization:</strong> Core enabling principle — abstracts hardware to create virtual resources</li>
+        <li><strong>Automation:</strong> Self-service, automated provisioning reduces human intervention</li>
+      </ul>
+
+      <div class="section-title">3.5 Desired Features of Cloud</div>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Openness:</strong> Standards-based, interoperable APIs</li>
+        <li><strong>Heterogeneity:</strong> Support diverse hardware and software platforms</li>
+        <li><strong>QoS (Quality of Service):</strong> Performance guarantees via SLAs</li>
+        <li><strong>SLA (Service Level Agreement):</strong> Contract defining expected service levels and uptime</li>
+        <li><strong>Portability:</strong> Ability to move data/apps between cloud providers</li>
+        <li><strong>Interoperability:</strong> Ability to work across different cloud platforms</li>
+      </ul>
+
+      <div class="section-title">3.6 Risks and Challenges in Cloud Computing</div>
+      <div class="note-box note-danger"><strong>⭐⭐ Security is the #1 concern in cloud adoption!</strong></div>
+      <h4 style="margin-bottom:.5rem">Major Risks:</h4>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Data Security & Privacy:</strong> Data stored on shared infrastructure, risk of unauthorized access or breaches</li>
+        <li><strong>Vendor Lock-in:</strong> Difficulty migrating between cloud providers due to proprietary formats</li>
+        <li><strong>Downtime & Availability:</strong> Outages violate SLA. Reliability depends on CSP.</li>
+        <li><strong>Compliance & Regulatory Issues:</strong> Data sovereignty laws may restrict where data can be stored</li>
+        <li><strong>Limited Customization:</strong> Public cloud restricts deep customization</li>
+        <li><strong>Network Latency:</strong> Inherent in WAN connectivity — all cloud apps suffer from latency</li>
+        <li><strong>Multi-tenancy Risk:</strong> Data breaches by malicious co-tenants</li>
+        <li><strong>Reduced visibility and control over data</strong></li>
+      </ul>
+      <div class="note-box note-warning"><strong>⭐ Which service provides LEAST security?</strong> IaaS provides the least built-in security. SaaS provides the most. (Provider manages more at SaaS level.)</div>
+
+      <h4 style="margin-bottom:.5rem">Cloud Security Alliance (CSA):</h4>
+      <p>Organization that promotes cloud computing security standards. Key governance body for cloud security.</p>
+      <button class="btn btn-success" onclick="markChapterComplete(3)" style="margin-top:1rem">✅ Mark Chapter 3 Complete</button>
+    </div>
+
+    <div class="tab-content" id="d3">
+      <div class="section-title">📋 Key Definitions</div>
+      <div class="def-item"><div class="def-term">SLA (Service Level Agreement)</div><p style="font-size:.9rem;margin-top:.25rem">Contract between cloud provider and customer defining expected service levels, uptime guarantees (e.g., 99.9% availability), and penalties for violations. Downtime violates SLA.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">QoS (Quality of Service)</div><p style="font-size:.9rem;margin-top:.25rem">Performance guarantees provided by cloud service. Includes metrics like latency, bandwidth, availability, and throughput. Introduced by SOC as fundamental concept for cloud.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">Elasticity</div><p style="font-size:.9rem;margin-top:.25rem">Dynamic provisioning and release of cloud resources based on demand. Unlike scalability (adding capacity), elasticity means seamless auto-scaling both up and down.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">Vendor Lock-in</div><p style="font-size:.9rem;margin-top:.25rem">Dependency on a single cloud provider's proprietary technology that makes it difficult or costly to migrate to another provider.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">Cloud Security Alliance (CSA)</div><p style="font-size:.9rem;margin-top:.25rem">Organization that promotes cloud computing security standards and best practices. Defines SECaaS categories and cloud security reference model.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐</p></div>
+    </div>
+
+    <div class="tab-content" id="t3">
+      <div class="section-title">📊 Cloud Security Risk Levels by Service Model</div>
+      <div class="table-wrap" style="margin-bottom:2rem">
+        <table>
+          <thead><tr><th>Service Model</th><th>Security Built-in</th><th>User Responsibility</th></tr></thead>
+          <tbody>
+            <tr><td><strong>SaaS</strong></td><td>Highest (most managed)</td><td>Lowest — just use the app</td></tr>
+            <tr><td><strong>PaaS</strong></td><td>Medium</td><td>Application security</td></tr>
+            <tr><td><strong>IaaS</strong></td><td>Lowest (least managed)</td><td>Highest — OS, apps, data</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 style="margin-bottom:.75rem">Cloud Challenges Summary</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Risk</th><th>Description</th><th>Impact</th></tr></thead>
+          <tbody>
+            <tr><td>Data Security</td><td>Shared infrastructure, unauthorized access</td><td>High</td></tr>
+            <tr><td>Downtime</td><td>Service unavailability, SLA violation</td><td>High</td></tr>
+            <tr><td>Vendor Lock-in</td><td>Hard to switch providers</td><td>Medium</td></tr>
+            <tr><td>Compliance</td><td>Data sovereignty laws</td><td>High</td></tr>
+            <tr><td>Latency</td><td>WAN propagation delays</td><td>Medium</td></tr>
+            <tr><td>Multi-tenancy</td><td>Malicious co-tenants</td><td>Medium</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-content" id="m3">
+      <div class="section-title">🧠 Memory Tricks</div>
+      <div class="mnemonic"><strong>⚠️ Risks Mnemonic — "DVCLNM"</strong><p style="margin-top:.4rem"><strong>D</strong>ata Security | <strong>V</strong>endor Lock-in | <strong>C</strong>ompliance | <strong>L</strong>atency | <strong>N</strong>etwork downtime | <strong>M</strong>ulti-tenancy risk</p><p style="font-size:.85rem;margin-top:.4rem">Phrase: <em>"Don't Venture Cloud Lightly — Need Mindfulness!"</em></p></div>
+      <div class="mnemonic"><strong>🛡️ Security by Service — "ISP Backwards"</strong><p style="margin-top:.4rem">IaaS = <strong>I</strong>nsecure (most user responsibility)<br>PaaS = <strong>P</strong>artially secured<br>SaaS = <strong>S</strong>ecured (most provider-managed)</p></div>
+      <div class="mnemonic"><strong>📋 SLA = "Service Level Agreement"</strong><p style="margin-top:.4rem">Think of it as a promise from your cloud provider. If they break the promise (downtime), the SLA is violated! It's like a restaurant promising food in 30 min.</p></div>
+    </div>
+
+    <div class="tab-content" id="q3">
+      <div class="section-title">❓ Chapter 3 Quiz</div>
+      <div id="ch3-mcqs"></div>
+    </div>
+
+    <div class="tab-content" id="f3">
+      <div class="section-title">🃏 Chapter 3 Flashcards</div>
+      <div id="ch3-cards"></div>
+    </div>
+
+    <div class="tab-content" id="r3">
+      <div class="section-title">⚡ 5-Minute Revision</div>
+      <div class="note-box note-success"><strong>1. Cloud Layers:</strong> Hardware → Infrastructure (IaaS) → Platform (PaaS) → Application (SaaS)</div>
+      <div class="note-box note-success"><strong>2. Core Principles:</strong> Scalability, Elasticity, Pay-per-use, Reliability, Availability, Security, Virtualization, Automation</div>
+      <div class="note-box note-success"><strong>3. Biggest Risk:</strong> Security. Second biggest: Vendor Lock-in. Data stored by CSP — privacy concerns.</div>
+      <div class="note-box note-success"><strong>4. SLA:</strong> Contract defining uptime guarantees. Downtime VIOLATES SLA.</div>
+      <div class="note-box note-success"><strong>5. Security by model:</strong> IaaS = least built-in. SaaS = most built-in.</div>
+      <div class="note-box note-success"><strong>6. CSA:</strong> Cloud Security Alliance — promotes cloud security standards.</div>
+      <div class="note-box note-warning"><strong>⚠️ Trap:</strong> All cloud apps suffer from WAN latency — it's inherent, not a bug.</div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:2rem;flex-wrap:wrap;gap:1rem">
+    <a href="cloud2.html" class="btn btn-secondary">← Chapter 2</a>
+    <a href="cloud4.html" class="btn btn-primary">Chapter 4: Cloud Types →</a>
+  </div>
+</div>
+<button class="back-to-top" id="backToTop">↑</button>
+<script src="../js/main.js"></script>
+<script>
+fetch('../data/mcqs.json').then(r=>r.json()).then(mcqs=>{
+  initQuiz(mcqs.filter(q=>q.chapter===3),'ch3-mcqs');
+});
+const ch3Cards=[
+  {front:"What violates a Service Level Agreement (SLA)?",back:"Downtime — when the cloud service is unavailable. SLAs define uptime commitments (e.g., 99.9%). Any unplanned outage violates the SLA."},
+  {front:"Which service model provides LEAST built-in security?",back:"IaaS — the user is responsible for the most security aspects (OS, apps, data). SaaS provides the MOST built-in security."},
+  {front:"What is Vendor Lock-in?",back:"Dependency on a single cloud provider due to proprietary technology, making it difficult or expensive to switch to another provider."},
+  {front:"What does CSA stand for?",back:"Cloud Security Alliance — the organization that promotes cloud computing security standards and defines SECaaS categories."},
+  {front:"Name 4 risks of cloud computing.",back:"1) Data Security & Privacy\n2) Vendor Lock-in\n3) Downtime (SLA violation)\n4) Compliance/Regulatory issues"},
+  {front:"What is QoS in cloud?",back:"Quality of Service — performance guarantees (latency, bandwidth, availability) defined in SLAs between provider and customer."},
+  {front:"What is the inherent problem in all cloud apps?",back:"Latency from WAN (Wide Area Network) connectivity. All cloud applications suffer from this propagation delay."}
+];
+initFlashcards(ch3Cards,'ch3-cards');
+</script>
+</body>
+</html>
+

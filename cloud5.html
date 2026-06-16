@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 5: IaaS & PaaS — NPTEL Study Guide</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>.mnemonic{background:linear-gradient(135deg,#fef3c7,#fffbeb);border:1px solid #fcd34d;border-radius:var(--radius-sm);padding:1rem;margin:.75rem 0}.def-item{border-left:3px solid var(--primary);padding:.5rem 1rem;margin:.75rem 0;background:var(--surface2);border-radius:0 var(--radius-sm) var(--radius-sm) 0}.def-term{font-weight:700;color:var(--primary)}</style>
+</head>
+<body>
+<nav class="navbar">
+  <a class="nav-brand" href="../index.html"><span class="icon">☁️</span> CloudStudy NPTEL</a>
+  <div class="nav-links" id="navLinks">
+    <a href="../index.html">Home</a><a href="chapter-5.html" class="active">Ch 5</a>
+    <a href="../mcq.html">MCQ</a><a href="../flashcards.html">Flashcards</a>
+    <a href="../glossary.html">Glossary</a><a href="../revision.html">Revision</a>
+  </div>
+  <button class="btn-theme" id="themeToggle">🌙</button>
+  <button class="hamburger" id="hamburger">☰</button>
+</nav>
+<div class="container page">
+  <div style="font-size:.8rem;color:var(--text-muted);margin-bottom:1rem"><a href="../index.html" style="color:var(--primary)">Home</a> › Module 2 › Chapter 5</div>
+  <div class="card" style="margin-bottom:1.5rem;background:linear-gradient(135deg,#dc2626,#d97706);color:white;border:none">
+    <div style="font-size:.8rem;opacity:.8;margin-bottom:.5rem">MODULE 2 — CHAPTER 5</div>
+    <h1 style="font-size:1.75rem;margin-bottom:.75rem">🖥️ IaaS & PaaS</h1>
+    <p style="opacity:.9;font-size:.95rem">Cloud service models, IaaS characteristics, pricing models, storage/compute/network services, PaaS benefits</p>
+    <div style="display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap">
+      <span style="background:rgba(255,255,255,.2);padding:.25rem .75rem;border-radius:20px;font-size:.8rem">⏱ ~50 min</span>
+      <span style="background:rgba(255,255,255,.2);padding:.25rem .75rem;border-radius:20px;font-size:.8rem">📊 20% weightage</span>
+      <span style="background:rgba(255,255,255,.2);padding:.25rem .75rem;border-radius:20px;font-size:.8rem">⭐⭐⭐ Exam Favourite</span>
+    </div>
+  </div>
+  <div class="tab-group">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="n5">📖 Notes</button>
+      <button class="tab-btn" data-tab="d5">📋 Definitions</button>
+      <button class="tab-btn" data-tab="t5">📊 Tables</button>
+      <button class="tab-btn" data-tab="m5">🧠 Memory</button>
+      <button class="tab-btn" data-tab="q5">❓ Quiz</button>
+      <button class="tab-btn" data-tab="f5">🃏 Flashcards</button>
+      <button class="tab-btn" data-tab="r5">⚡ Revision</button>
+    </div>
+
+    <div class="tab-content active" id="n5">
+      <div class="note-box note-info"><strong>🎯 Learning Objectives:</strong> Service models overview, IaaS characteristics and when to use it, IaaS pricing models (on-demand/prepaid/auctioned), IaaS services (storage/compute/network), PaaS definition and benefits.</div>
+
+      <div class="section-title">1.2 Cloud Service Models Overview</div>
+      <div class="note-box note-success"><strong>⭐⭐⭐ Provider vs User Responsibility:</strong><br>
+        <strong>On-Premise:</strong> User manages EVERYTHING<br>
+        <strong>IaaS:</strong> Provider manages hardware/network/servers. User manages: apps, runtime, middleware, data<br>
+        <strong>PaaS:</strong> Provider manages everything except apps and data<br>
+        <strong>SaaS:</strong> Provider manages everything. User just uses the service.
+      </div>
+      <div class="table-wrap" style="margin-bottom:1rem">
+        <table>
+          <thead><tr><th>Service Type</th><th>Major Providers</th></tr></thead>
+          <tbody>
+            <tr><td><strong>IaaS</strong></td><td>AWS, Microsoft Azure, Google Compute Engine (GCE), DigitalOcean, Rackspace</td></tr>
+            <tr><td><strong>PaaS</strong></td><td>Google App Engine, Apache Stratos, AWS Elastic Beanstalk, Windows Azure, Heroku, Force.com, OpenShift</td></tr>
+            <tr><td><strong>SaaS</strong></td><td>Google Apps, Dropbox, Salesforce, Cisco WebEx, Concur, GoToMeeting</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-title">1.3 Infrastructure as a Service (IaaS)</div>
+      <p style="margin-bottom:1rem">IaaS = instead of owning hardware, you access it as a service. Think of it like renting a car instead of buying one.</p>
+      <h4 style="margin-bottom:.5rem">IaaS Services Offered:</h4>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li>Storage Service</li><li>Compute Service</li><li>Network Service</li><li>Cloud Management Service</li>
+      </ul>
+      <h4 style="margin-bottom:.5rem">IaaS Characteristics:</h4>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Access through rich UI:</strong> Web Interface, Programming API, CLI</li>
+        <li><strong>Pay as you Go:</strong> Charged based on time used and type of service</li>
+        <li><strong>Self-service on-demand provisioning:</strong> Choose from available offerings online</li>
+        <li><strong>Higher availability:</strong> Access from anywhere, any device</li>
+        <li><strong>Highly Reliable:</strong> Resources pooled across data centers; auto-failover</li>
+        <li><strong>Scalable:</strong> Auto-scaling feature — scale up/down based on workload</li>
+      </ul>
+      <h4 style="margin-bottom:.5rem">When to use IaaS:</h4>
+      <ul style="padding-left:1.5rem;margin-bottom:.5rem">
+        <li>When demand for computing resources is <strong>volatile</strong></li>
+        <li>When new organizations want to <strong>reduce capital cost</strong></li>
+        <li>When <strong>specific, trial or temporary</strong> hardware access is needed</li>
+      </ul>
+      <h4 style="margin-bottom:.5rem">When NOT to use IaaS:</h4>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li>When you want <strong>higher performance</strong> (on-premise is better)</li>
+        <li>When <strong>regulatory compliance</strong> restricts off-shoring data</li>
+      </ul>
+
+      <div class="section-title">IaaS Storage Services</div>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li>Access data anytime, anywhere</li>
+        <li>Provider manages distributed storage devices, redundancy, and consistency</li>
+        <li>Issues: Internet dependency, network latency, data security</li>
+        <li><strong>Pricing factors:</strong> Storage capacity, data transferred to cloud, data retrieved, reliability level</li>
+      </ul>
+
+      <div class="section-title">IaaS Compute Services — 3 Pricing Models</div>
+      <div class="card" style="margin-bottom:.75rem">
+        <h4>1. 🕐 On-Demand</h4>
+        <p style="font-size:.9rem;margin-top:.3rem">Pay by the hour. No long-term commitment. Users can occupy/free resources on the fly. Best for users who <strong>don't know requirements in advance</strong>.</p>
+      </div>
+      <div class="card" style="margin-bottom:.75rem">
+        <h4>2. 💳 Prepaid (Reservation)</h4>
+        <p style="font-size:.9rem;margin-top:.3rem">Pay in advance for specific time period. Cheaper than on-demand because provider can plan ahead. Best for users who <strong>know requirements in advance</strong>.</p>
+      </div>
+      <div class="card" style="margin-bottom:.75rem">
+        <h4>3. 🎯 Auctioned (Spot/Bid)</h4>
+        <p style="font-size:.9rem;margin-top:.3rem">Users bid for resources. Bid price controlled by supply & demand. Helps providers utilize idle infrastructure. Best when <strong>resource requirement is not immediate</strong>. Useful for non-production environments. AWS calls this "Spot Instances".</p>
+      </div>
+
+      <div class="section-title">IaaS Network Services</div>
+      <h4 style="margin-bottom:.5rem">Two most widely used:</h4>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Load Balancing:</strong> Single access point to multiple servers. Distributes requests. Approaches: Round Robin, Weighted Round Robin, Dynamic Round Robin, <strong>Least Connections</strong>, Fastest Server</li>
+        <li><strong>DNS:</strong> Hierarchical name/IP resolution. Stores IP/domain mapping for internal + external servers. Features: Geo-location DNS routing, extended security, API for developers</li>
+      </ul>
+
+      <div class="section-title">Cloud Management Services (CMS)</div>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Cloud Value Added Management Services:</strong> Build additional features on top of existing cloud services. Automate manual tasks.</li>
+        <li><strong>Cloud Integration Service (CIS):</strong> Integrates private + public clouds. Abstraction layer for multi-cloud support. Automates provisioning, scaling, monitoring, configuration.</li>
+        <li><strong>Cloud Service Brokerages (CSB):</strong> Aggregates services from different providers. Organizes into searchable service catalogue.</li>
+      </ul>
+
+      <div class="section-title">1.4 Platform as a Service (PaaS)</div>
+      <p style="margin-bottom:1rem">PaaS = configurable application platform. Abstraction layer ABOVE hardware, OS, and virtualization stack. <strong>PaaS = IaaS + custom software stack for the application.</strong></p>
+      <h4 style="margin-bottom:.5rem">PaaS Benefits:</h4>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li>Write, build and deployment tools for rapid development</li>
+        <li>Application integration with web services and databases</li>
+        <li>Multi-tenancy platform for many concurrent users</li>
+        <li>Easy API management</li>
+        <li>Logging, reporting, and code instrumentation</li>
+        <li>Security, scalability, redundancy, auto-provisioning</li>
+      </ul>
+      <h4 style="margin-bottom:.5rem">PaaS Services:</h4>
+      <ul style="padding-left:1.5rem;margin-bottom:1rem">
+        <li><strong>Integration Services:</strong> Integrate data from multiple sources (on-premise, cloud, CRM, etc.). <strong>Dell Boomi</strong> = leader, integrates 40+ technologies</li>
+        <li><strong>Application Development & Deployment:</strong> Supports agile/continuous delivery. Google AppEngine, Amazon Beanstalk automate build/test/release/deploy.</li>
+        <li><strong>Data Analysis & Business Intelligence:</strong> Simplify data analysis, apply statistical methods for business decisions. Issues: Less control, limited customization, lack of maturity.</li>
+      </ul>
+      <button class="btn btn-success" onclick="markChapterComplete(5)" style="margin-top:1rem">✅ Mark Chapter 5 Complete</button>
+    </div>
+
+    <div class="tab-content" id="d5">
+      <div class="section-title">📋 Key Definitions</div>
+      <div class="def-item"><div class="def-term">IaaS (Infrastructure as a Service)</div><p style="font-size:.9rem;margin-top:.25rem">Cloud service model providing virtualized computing infrastructure (servers, storage, networking) over the internet. Instead of owning hardware, you access it as a service.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">PaaS (Platform as a Service)</div><p style="font-size:.9rem;margin-top:.25rem">Cloud service model providing configurable application platform (OS, runtime, middleware, dev tools) on top of IaaS. PaaS = IaaS + custom software stack.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">On-Demand Pricing</div><p style="font-size:.9rem;margin-top:.25rem">IaaS pricing where users pay per hour with no long-term commitment. Maximum flexibility. Best when requirements are unknown.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">Auctioned/Spot Pricing</div><p style="font-size:.9rem;margin-top:.25rem">Users bid for compute resources. Price is market-driven by supply/demand. Best for non-production, non-urgent workloads. AWS Spot Instances use this model.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">Least Connections (Load Balancing)</div><p style="font-size:.9rem;margin-top:.25rem">Load balancing approach that routes new requests to the server with fewest active connections. Ensures more equal load distribution.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">Dell Boomi</div><p style="font-size:.9rem;margin-top:.25rem">Leader in cloud data integration under PaaS. Integrates 40+ technologies and protocols including Oracle, SAP, Salesforce, Hadoop, QuickBooks.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐</p></div>
+      <div class="def-item"><div class="def-term">Auto-Scaling</div><p style="font-size:.9rem;margin-top:.25rem">IaaS feature that automatically scales resources up (scale-out) or down (scale-in) based on workload demands without manual intervention.</p><p style="font-size:.8rem;color:var(--primary)">⭐⭐</p></div>
+    </div>
+
+    <div class="tab-content" id="t5">
+      <div class="section-title">📊 IaaS vs PaaS vs SaaS Mega Table</div>
+      <div class="table-wrap" style="margin-bottom:2rem">
+        <table>
+          <thead><tr><th>Feature</th><th>IaaS</th><th>PaaS</th><th>SaaS</th></tr></thead>
+          <tbody>
+            <tr><td>What you get</td><td>Virtual machines, storage, networking</td><td>OS, runtime, middleware, dev tools</td><td>Ready-to-use software</td></tr>
+            <tr><td>User manages</td><td>Apps, runtime, middleware, OS, data</td><td>Apps and data only</td><td>Nothing (just use it)</td></tr>
+            <tr><td>Provider manages</td><td>Hardware, networking</td><td>Hardware + OS + middleware</td><td>Everything</td></tr>
+            <tr><td>Security built-in</td><td>Least</td><td>Medium</td><td>Most</td></tr>
+            <tr><td>Control</td><td>Most (for user)</td><td>Medium</td><td>Least</td></tr>
+            <tr><td>Flexibility</td><td>Highest</td><td>High</td><td>Lowest</td></tr>
+            <tr><td>Examples</td><td>AWS EC2, Azure VMs</td><td>Google App Engine, Heroku</td><td>Gmail, Salesforce, Dropbox</td></tr>
+            <tr><td>Best for</td><td>Dev, test, volatile workloads</td><td>App development teams</td><td>End users, business apps</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 style="margin-bottom:.75rem">IaaS Compute Pricing Models</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Model</th><th>How it works</th><th>Best for</th><th>Cost</th></tr></thead>
+          <tbody>
+            <tr><td><strong>On-Demand</strong></td><td>Pay per hour, no commitment</td><td>Unpredictable workloads</td><td>Highest</td></tr>
+            <tr><td><strong>Prepaid/Reserved</strong></td><td>Pay upfront for time period</td><td>Predictable workloads</td><td>Lower than on-demand</td></tr>
+            <tr><td><strong>Auctioned/Spot</strong></td><td>Bid for idle resources</td><td>Non-urgent, non-production</td><td>Lowest (variable)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-content" id="m5">
+      <div class="section-title">🧠 Memory Tricks</div>
+      <div class="mnemonic"><strong>🚗 IaaS = Renting a Car</strong><p style="margin-top:.4rem">You rent the car (infrastructure). You drive it (manage apps). You fuel it (pay for use). Car company maintains it (CSP manages hardware).</p></div>
+      <div class="mnemonic"><strong>🏗️ PaaS = Renting an Apartment</strong><p style="margin-top:.4rem">Building + walls provided (platform). You furnish it (your app). You don't manage plumbing or electricity (OS/middleware managed by provider).</p></div>
+      <div class="mnemonic"><strong>💰 3 IaaS Pricing — "OPA"</strong><p style="margin-top:.4rem"><strong>O</strong>n-demand (flexible, most expensive) | <strong>P</strong>repaid/Reserved (commit ahead, cheaper) | <strong>A</strong>uctioned/Spot (bid, cheapest but not immediate)</p><p style="font-size:.85rem;margin-top:.4rem">Think: <em>"Order Pizza Ahead"</em> — ordering on the spot is priciest, planning ahead saves money, bidding on leftover pizza is cheapest!</p></div>
+      <div class="mnemonic"><strong>⚖️ Load Balancing Approaches — "RWD LF"</strong><p style="margin-top:.4rem"><strong>R</strong>ound Robin | <strong>W</strong>eighted Round Robin | <strong>D</strong>ynamic Round Robin | <strong>L</strong>east Connections | <strong>F</strong>astest Server</p></div>
+      <div class="mnemonic"><strong>🔗 Dell Boomi — Key Fact</strong><p style="margin-top:.4rem">Leader in cloud data integration. Integrates <strong>40+</strong> technologies. Remember: "Boomi = Boom of integration!"</p></div>
+    </div>
+
+    <div class="tab-content" id="q5">
+      <div class="section-title">❓ Chapter 5 Quiz</div>
+      <div id="ch5-mcqs"></div>
+    </div>
+
+    <div class="tab-content" id="f5">
+      <div class="section-title">🃏 Chapter 5 Flashcards</div>
+      <div id="ch5-cards"></div>
+    </div>
+
+    <div class="tab-content" id="r5">
+      <div class="section-title">⚡ 5-Minute Revision</div>
+      <div class="note-box note-success"><strong>1. Responsibility:</strong> On-premise = all user. IaaS = user manages apps/runtime/data. PaaS = user manages apps+data only. SaaS = user manages nothing.</div>
+      <div class="note-box note-success"><strong>2. IaaS Services:</strong> Storage + Compute + Network + Cloud Management</div>
+      <div class="note-box note-success"><strong>3. 3 Pricing Models:</strong> On-Demand (pay/hr) | Prepaid/Reserved (advance) | Auctioned/Spot (bid)</div>
+      <div class="note-box note-success"><strong>4. Use IaaS when:</strong> Volatile demand, reduce capex, temporary access needed</div>
+      <div class="note-box note-success"><strong>5. Don't use IaaS when:</strong> Need max performance or have compliance restrictions</div>
+      <div class="note-box note-success"><strong>6. PaaS = IaaS + custom software stack. Dell Boomi = PaaS integration leader (40+ technologies)</strong></div>
+      <div class="note-box note-success"><strong>7. Load balancing approaches:</strong> Round Robin, Weighted RR, Dynamic RR, Least Connections, Fastest Server</div>
+      <div class="note-box note-warning"><strong>⚠️ Trap:</strong> Auctioned model is NOT immediate — for non-urgent needs. Prepaid is NOT most expensive — it's cheaper than on-demand.</div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;margin-top:2rem;flex-wrap:wrap;gap:1rem">
+    <a href="cloud4.html" class="btn btn-secondary">← Chapter 4</a>
+    <a href="cloud6.html" class="btn btn-primary">Chapter 6: SaaS & DBaaS →</a>
+  </div>
+</div>
+<button class="back-to-top" id="backToTop">↑</button>
+<script src="../js/main.js"></script>
+<script>
+fetch('../data/mcqs.json').then(r=>r.json()).then(mcqs=>{
+  initQuiz(mcqs.filter(q=>q.chapter===5),'ch5-mcqs');
+});
+const ch5Cards=[
+  {front:"IaaS pricing model where users BID for resources?",back:"Auctioned/Spot model — price controlled by supply & demand. Best for non-production, non-urgent workloads. AWS calls this 'Spot Instances'. Cheapest model."},
+  {front:"PaaS definition?",back:"Platform as a Service — configurable application platform above hardware, OS, virtualization. PaaS = IaaS + custom software stack for the application."},
+  {front:"Who is the leader in cloud data integration (PaaS)?",back:"Dell Boomi — integrates 40+ technologies and protocols including Oracle, SAP, Siebel, Salesforce, Hadoop, QuickBooks."},
+  {front:"Name 5 load balancing approaches in IaaS.",back:"1) Simple Round Robin\n2) Weighted Round Robin\n3) Dynamic Round Robin\n4) Least Connections\n5) Fastest Server"},
+  {front:"When should you NOT use IaaS?",back:"1) When higher performance is needed (on-premise is better)\n2) When regulatory compliance restricts off-shoring data storage"},
+  {front:"What does CIS (Cloud Integration Service) do?",back:"Provides abstraction layer for transparent multi-cloud support. Automates administrative tasks like provisioning, scaling, monitoring, and configuration."},
+  {front:"4 IaaS characteristics?",back:"1) Rich UI access (Web/API/CLI)\n2) Pay-as-you-go\n3) Self-service demand provisioning\n4) Higher availability\n5) Highly Reliable\n6) Scalable (auto-scaling)"},
+  {front:"Prepaid vs On-Demand IaaS pricing?",back:"Prepaid: Pay in advance → cheaper. Best for predictable workloads.\nOn-Demand: Pay per hour → more expensive. Best for unpredictable/volatile workloads."}
+];
+initFlashcards(ch5Cards,'ch5-cards');
+</script>
+</body>
+</html>
+
+
